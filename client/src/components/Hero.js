@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react'
 import TypeWriter from "typewriter-effect"
 import "./Hero.css"
+import Heroimage from "../Assets/hero.png"
 
 
 const Hero = () => {
     useEffect(() => {
         setInterval(()=> {
             TypeWriter(true);
-        }, 4000)
+        }, 20000)
     })
   return (
-    <div>
+    <div className='hero-container'>
         <h1 className='intro'>I'm <span className='my-name'><TypeWriter onInit={(TypeWriter)=> {
             TypeWriter
             .typeString("Satyam Singh")
@@ -28,6 +29,9 @@ const Hero = () => {
         } } />
         </span>
         </h1>
+        <div className='logo-image'>
+        <img className='logo' src={Heroimage} alt="logo" />
+        </div>
     </div>
   )
 }
