@@ -5,6 +5,8 @@ import Heroimage from "../Assets/hero.png"
 
 
 const Hero = () => {
+    
+    
     useEffect(() => {
         setInterval(()=> {
             TypeWriter(true);
@@ -12,7 +14,7 @@ const Hero = () => {
     })
   return (
     <div className='hero-container'>
-        <h1 className='intro'>I'm <span className='my-name'><TypeWriter onInit={(TypeWriter)=> {
+        <h1 className='intro text-center m-0'>I'm <span className='my-name'><TypeWriter onInit={(TypeWriter)=> {
             TypeWriter
             .typeString("Satyam Singh")
             .pauseFor(1000)
