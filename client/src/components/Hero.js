@@ -27,6 +27,7 @@ const Hero = () => {
             .deleteAll()
             .typeString("a Hackathon enthusiast")
             .pauseFor(1000)
+            .deleteAll()
             .typeString("Satyam Singh")
             .pauseFor(1000)
             .start()
