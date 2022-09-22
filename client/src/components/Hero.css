@@ -52,6 +52,13 @@
     display: block; 
 }
 
+.projects {
+    padding: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 721px) {
     .intro {
         font-size: 1rem;
@@ -60,4 +67,42 @@
     width: 395px;   
 
     }
+}
+
+a {
+    /* padding: 300px; */
+    color: white;
+    margin: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:#28282B;
+}
+
+.Header {
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.Header h1{
+    padding-left: 10px;
+}
+
+
+.hand-image-nav {
+    height: 60px;
+}
+
+.discord-style {
+    background-color: #7289DA;
+    border-radius: 5px;
+    color: whitesmoke;
 }

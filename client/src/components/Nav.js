@@ -1,16 +1,20 @@
 import React from 'react'
-import hand from "../Assets/hand.gif"
 import './Nav.css';
+import { Link } from 'react-router-dom';
 
 
 const Nav = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "row" }} className='Header'>
-        <h1>Hello <span className='discord-style'>@everyone</span>!</h1>
-        <div>
-        <img style={{ display: "flex", flex: 1 }} className='hand-image-nav' src={hand} alt="Hi" />
-        </div>
+    <>
+    <div className='NavbarLink'>
+        <li>
+          <Link to="/About">About</Link>
+        </li>
+        <li>Projects</li>
+        <li>Achievements</li>
+        <li>Open Source</li>
     </div>
+    </>
   )
 }
 

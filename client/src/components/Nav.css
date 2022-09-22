@@ -1,31 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
+
+.NavbarLink {
+    display: flex;
+    justify-content: space-between;
 }
 
-body {
-    background-color:#28282B;
-}
-
-.Header {
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.NavbarLink li {
+    list-style: none;
     color: white;
-}
-
-.Header h1{
-    padding-left: 10px;
-}
-
-
-.hand-image-nav {
-    height: 60px;
-}
-
-.discord-style {
-    background-color: #7289DA;
-    border-radius: 5px;
-    color: whitesmoke;
 }
