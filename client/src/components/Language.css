@@ -1,0 +1,10 @@
+.lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.lang img {
+    height: 100px;
+}

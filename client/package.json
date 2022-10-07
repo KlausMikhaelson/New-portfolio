@@ -11,7 +11,7 @@
     "jquery": "^3.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-parallax-hover": "^2.0.2",
+    "react-draggable": "^4.4.5",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
     "react-scroll-parallax": "^3.3.1",
