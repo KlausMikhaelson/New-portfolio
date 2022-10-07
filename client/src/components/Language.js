@@ -13,12 +13,17 @@ const Language = () => {
         <div className='react-lang'>
           <img src={Reactimg} alt="React" />
           <div className='progress'>
-        <span className='react'></span>
+            <span className='react'></span>
           </div>
         </div>
-          <img src={Nodejs} alt="NodeJs" />
-          <img src={Js} alt="Js" />
-          <img src={Java} alt="Java" />
+        <div className='Node-lang'>
+        <img src={Nodejs} alt="NodeJs" />
+        <div className='progress'>
+            <span className='Node'></span>
+        </div>
+        </div>
+        <img src={Js} alt="Js" />
+        <img src={Java} alt="Java" />
       </div>
     </>
   )
