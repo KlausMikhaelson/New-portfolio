@@ -1,6 +1,7 @@
 .lang {
     display: grid;
-    margin-left: 100px;
+    /* margin-left: 100px; */
+    margin-left: 2%;
 }
 
 .lang img {
@@ -10,10 +11,10 @@
 
 
 .react-lang {
-    display: flex;
+    /* display: flex; */
 }
 .Node-lang {
-    display: flex;
+    /* display: flex; */
 }
 
 .react {
@@ -27,6 +28,13 @@
     border: 1px solid black;
     width: 85%;
 }
+
+.lang-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .Node {
     background-color: #aaa5ff;
     border: 2px solid white;
@@ -36,6 +44,7 @@
     color: white;
     border: 1px solid black;
     width: 90%;
+    
 }
 
 .progress {
@@ -45,4 +54,6 @@
     height: 28px;
     margin-top: 50px;
     border-radius: 20px;
+    margin-right: 2%;
+
 }

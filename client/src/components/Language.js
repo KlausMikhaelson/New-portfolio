@@ -11,16 +11,20 @@ const Language = () => {
     <>
       <div className='lang'>
         <div className='react-lang'>
+          <div className='lang-name'>
           <img src={Reactimg} alt="React" />
+          </div>
           <div className='progress'>
             <span className='react'></span>
           </div>
         </div>
         <div className='Node-lang'>
-        <img src={Nodejs} alt="NodeJs" />
-        <div className='progress'>
+          <div className='lang-name'>
+          <img src={Nodejs} alt="NodeJs" />
+          </div>
+          <div className='progress'>
             <span className='Node'></span>
-        </div>
+          </div>
         </div>
         <img src={Js} alt="Js" />
         <img src={Java} alt="Java" />
