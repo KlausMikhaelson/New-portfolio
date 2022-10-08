@@ -4,6 +4,7 @@ import Nodejs from "../Assets/nodejs.png"
 import Js from "../Assets/js.png"
 import "./Language.css"
 import Java from "../Assets/java.png"
+import Python from "../Assets/python.png"
 
 
 const Language = () => {
@@ -26,8 +27,30 @@ const Language = () => {
             <span className='Node'></span>
           </div>
         </div>
-        <img src={Js} alt="Js" />
-        <img src={Java} alt="Java" />
+        <div className='Node-lang'>
+          <div className='lang-name'>
+          <img src={Js} alt="Js" />
+          </div>
+          <div className='progress'>
+            <span className='js'></span>
+          </div>
+        </div>
+        <div className='Node-lang'>
+          <div className='lang-name'>
+          <img src={Java} alt="Java" />
+          </div>
+          <div className='progress'>
+            <span className='java'></span>
+          </div>
+        </div>
+        <div className='Node-lang'>
+          <div className='lang-name'>
+          <img src={Python} alt="Python" />
+          </div>
+          <div className='progress'>
+            <span className='Python'></span>
+          </div>
+        </div>
       </div>
     </>
   )

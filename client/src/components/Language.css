@@ -12,9 +12,13 @@
 
 .react-lang {
     /* display: flex; */
+    margin-right: 2%;
+
 }
 .Node-lang {
     /* display: flex; */
+    margin-right: 2%;
+    
 }
 
 .react {
@@ -27,12 +31,26 @@
     color: white;
     border: 1px solid black;
     width: 85%;
+    
+}
+
+.js {
+    background-color: #aaa5ff;
+    border: 2px solid white;
+    height: 20px;
+    /* margin-top: 4px; */
+    padding: 13px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid black;
+    width: 90%;
 }
 
 .lang-name {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .Node {
@@ -47,13 +65,35 @@
     
 }
 
+.java{
+    background-color: #aaa5ff;
+    border: 2px solid white;
+    height: 20px;
+    padding: 13px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid black;
+    width: 75%;
+    
+}
+
+.Python {
+    background-color: #aaa5ff;
+    border: 2px solid white;
+    height: 20px;
+    padding: 13px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid black;
+    width: 80%;
+}
+
 .progress {
     display: flex;
     background-color: white;
     width: 100%;
+    max-width: 1200px;
     height: 28px;
     margin-top: 50px;
     border-radius: 20px;
-    margin-right: 2%;
-
 }
