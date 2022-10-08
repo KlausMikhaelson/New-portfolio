@@ -4,6 +4,12 @@
     margin-left: 2%;
 }
 
+.header-lang {
+    color: white;
+    font-size: 2rem;
+    margin: 40px;
+}
+
 .lang img {
     height: 100px;
     margin: 10px;
@@ -86,6 +92,40 @@
     color: white;
     border: 1px solid black;
     width: 80%;
+}
+
+.Tensorflow {
+    background-color: #aaa5ff;
+    border: 2px solid white;
+    height: 20px;
+    padding: 13px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid black;
+    width: 60%;
+}
+
+.MongoDb {
+    background-color: #aaa5ff;
+    border: 2px solid white;
+    height: 20px;
+    padding: 13px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid black;
+    width: 85%;
+}
+
+.Firebase {
+    
+    background-color: #aaa5ff;
+    border: 2px solid white;
+    height: 20px;
+    padding: 13px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid black;
+    width: 75%;
 }
 
 .progress {
