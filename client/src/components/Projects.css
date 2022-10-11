@@ -1,13 +1,14 @@
 .project-header {
     color: white;
     font-size: 2.5rem;
-    margin: 30px;
+    margin: 50px;
 }
 
 .project-list {
+    margin-top: 100px;
     color: white;
     display: grid;
-    grid-template-rows: 30% 30% 30%;
+    grid-template-columns: 30% 30% 30%;
     align-items: center;
     justify-content: center;
     padding: 30px;
@@ -15,10 +16,25 @@
 
 .vsroom {
     text-align: center;
+    max-width: 269px;
 }
 
 .project-img {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #F2AA4CFF;
+}
+
+.vsroom h1 {
+    color: black;
+    background-color: #FEE715FF;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.vsroom p {
+    background-color:#FEE715FF;
+    color: black;
+    border-radius: 0px 0px 10px 10px;
 }
