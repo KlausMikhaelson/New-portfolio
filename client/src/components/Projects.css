@@ -16,3 +16,9 @@
 .vsroom {
     text-align: center;
 }
+
+.project-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
