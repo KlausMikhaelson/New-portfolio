@@ -1,14 +1,21 @@
 import React from 'react'
+import "./Projects.css"
 
 const Projects = () => {
   return (
     <>
     <div>
-        <h1>
+        <h1 className='project-header'>
             Projects !
         </h1>
-        <div>
-            <a href='www.virtualstudyroom.tech' target="blank">Hello</a>
+        <div className='project-list'>
+          <span className='vsroom'>
+            <h1>Virtual Study Room</h1>
+            <p>Virtual Study Room helps users <br></br>
+            to study collaboratively with <br></br> 
+            their friends while
+            </p>
+          </span>
         </div>
     </div>
     </>
