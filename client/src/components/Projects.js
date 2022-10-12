@@ -20,7 +20,7 @@ const Projects = () => {
             their friends while
             </p>
           </span>
-          <span className='vsroom'>
+          {/* <span className='vsroom'>
             <h1>Virtual Study Room</h1>
             <span className='project-img'>
             <img src={VSimg} alt="Virtual Study Room" />
@@ -39,7 +39,7 @@ const Projects = () => {
             to study collaboratively with <br></br> 
             their friends while
             </p>
-          </span>
+          </span> */}
         </div>
     </div>
     </>

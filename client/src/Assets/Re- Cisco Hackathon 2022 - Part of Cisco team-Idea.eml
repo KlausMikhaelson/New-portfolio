@@ -1,0 +1,405 @@
+Received: from DM4PR11MB6382.namprd11.prod.outlook.com (2603:10b6:8:be::18) by
+ SJ0PR11MB5136.namprd11.prod.outlook.com with HTTPS; Thu, 6 Oct 2022 05:13:12
+ +0000
+Received: from DM6PR13CA0038.namprd13.prod.outlook.com (2603:10b6:5:134::15)
+ by DM4PR11MB6382.namprd11.prod.outlook.com (2603:10b6:8:be::18) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5676.28; Thu, 6 Oct
+ 2022 05:13:10 +0000
+Received: from DM6NAM10FT043.eop-nam10.prod.protection.outlook.com
+ (2603:10b6:5:134:cafe::66) by DM6PR13CA0038.outlook.office365.com
+ (2603:10b6:5:134::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5723.10 via Frontend
+ Transport; Thu, 6 Oct 2022 05:13:10 +0000
+Authentication-Results: spf=softfail (sender IP is 173.37.135.122)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ gmail.com discourages use of 173.37.135.122 as permitted sender)
+Received: from mail.cisco.com (173.37.135.122) by
+ DM6NAM10FT043.mail.protection.outlook.com (10.13.153.165) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.5709.12 via Frontend Transport; Thu, 6 Oct 2022 05:13:10 +0000
+Received: from xbe-rcd-004.cisco.com (173.37.102.19) by xfe-aln-002.cisco.com
+ (173.37.135.122) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.9; Thu, 6 Oct 2022
+ 00:13:10 -0500
+Received: from xbe-rcd-001.cisco.com (173.37.102.16) by xbe-rcd-004.cisco.com
+ (173.37.102.19) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.9; Thu, 6 Oct 2022
+ 00:13:08 -0500
+Received: from alln-iport-1.cisco.com (173.37.142.88) by mail.cisco.com
+ (173.37.102.16) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1118.9 via Frontend
+ Transport; Thu, 6 Oct 2022 00:13:08 -0500
+Received: from alln-core-10.cisco.com ([173.36.13.132])
+  by alln-iport-1.cisco.com with ESMTP/TLS/DHE-RSA-SEED-SHA; 06 Oct 2022 05:13:08 +0000
+Received: from alln-inbound-k.cisco.com (alln-inbound-k.cisco.com [173.37.147.241])
+	by alln-core-10.cisco.com (8.15.2/8.15.2) with ESMTPS id 2965D6ae006162
+	(version=TLSv1.2 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+	Thu, 6 Oct 2022 05:13:08 GMT
+Received-SPF: Pass (alln-inbound-k.cisco.com: domain of
+  satyamsinghsrc5076@gmail.com designates
+  2a00:1450:4864:20::62d as permitted sender)
+  identity=mailfrom; client-ip=2a00:1450:4864:20::62d;
+  receiver=alln-inbound-k.cisco.com;
+  envelope-from="satyamsinghsrc5076@gmail.com";
+  x-sender="satyamsinghsrc5076@gmail.com";
+  x-conformance=spf_only; x-record-type="v=spf1";
+  x-record-text="v=spf1 ip6:2001:4860:4000::/36
+  ip6:2404:6800:4000::/36 ip6:2607:f8b0:4000::/36
+  ip6:2800:3f0:4000::/36 ip6:2a00:1450:4000::/36
+  ip6:2c0f:fb50:4000::/36 ~all"
+Received-SPF: None (alln-inbound-k.cisco.com: no sender
+  authenticity information available from domain of
+  postmaster@mail-ej1-x62d.google.com) identity=helo;
+  client-ip=2a00:1450:4864:20::62d;
+  receiver=alln-inbound-k.cisco.com;
+  envelope-from="satyamsinghsrc5076@gmail.com";
+  x-sender="postmaster@mail-ej1-x62d.google.com";
+  x-conformance=spf_only
+Authentication-Results-Original: alln-inbound-k.cisco.com; spf=Pass
+ smtp.mailfrom=satyamsinghsrc5076@gmail.com; spf=None
+ smtp.helo=postmaster@mail-ej1-x62d.google.com; dkim=pass (signature verified)
+ header.i=@gmail.com; dmarc=pass (p=none dis=none) d=gmail.com
+IronPort-SDR: wmuXH67TpVdve+ge5B5TsYet2vd4qUY4oK2mXYyuUtzgVTG6dlDwA/JIU/1eKUxLzfrHBBe5A8
+ nuwNufx2uxGV4OTLZLgZ21WJcgYTIxpmE=
+X-from-outside-Cisco: 2a00:1450:4864:20::62d
+X-IPAS-Result: =?us-ascii?q?A8GIBACUYz5jfVAUACqEw5CAIACMLVoeAQELEgyCBAuBU?=
+ =?us-ascii?q?gFRgVYvBAtFhE+BI491ixAwAoEEhh8DiFeBVoElAxg8CwEBAgEBAQEKQgQBA?=
+ =?us-ascii?q?QMEhH4ChHMCHQcBNAkOAQIBAgEBAQEBAwIDAQEBAQEBAwEBAQQBAQECAQECB?=
+ =?us-ascii?q?AICAQECEAEBOgcOcwFhAwFEgU+BdAsDMQ2CNSkBdE0DOAEBAQEBAQEBAQEBA?=
+ =?us-ascii?q?QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEEAn4oAR8BAQECARIRHQEbHQEDA?=
+ =?us-ascii?q?QsGBQQBBjcCAiIBEQEFARwGCwgihUgBAw0jBJ0JgQRCizKBFQUCFoEBggkGB?=
+ =?us-ascii?q?QMCAUeDfQoZKA1oA4FZAgcSgSuHB25VAQGGZHongimBS4JEMD6IGoJmBJl4B?=
+ =?us-ascii?q?AcDBAEEAQYOAwMCIQECAUMdAgkDIxADCxAHARMXKAYBBAEBCgIBBAEFAwEEB?=
+ =?us-ascii?q?QMHAgEFBgIJAwkDAQEFAQMEAwMDAgcDAQIMBAgDAwIDBAICAgIBAwIHBQgEA?=
+ =?us-ascii?q?gcCAgIBAgICBAIBAwkBAgMFAgIJCwEEAgIDAQMBAQIIBAkEAgMEAgEBAwIBA?=
+ =?us-ascii?q?gIBBQIMBQEBAQECBQECAwEGBwIIAhwKAQMEAgIFAgIBAgMNAQEEAgECAQIGA?=
+ =?us-ascii?q?QMBAgIDAQMBAgIDAgYJAgQBBQMDAgIDAQEFDwUCBAIBAgYFAgEBAQQBAwQEB?=
+ =?us-ascii?q?gICAQMDAg4CBAEEAQIBASMDBAIDAQMXAQIBAgMDAwQGBwUCAQITAQIBAQEFA?=
+ =?us-ascii?q?QIBAQMEBAEGCQMCAgQDAwUBAQIDAgEBAQcMAgICEgITAwEGAQMLBQETAwIEA?=
+ =?us-ascii?q?gIBAgIKAgEBAgIBAwIJAgECAQUIGAMBAQ8kAQECAgIDBAcCAQQGAw0CAgEBA?=
+ =?us-ascii?q?QUGDQMCAwgBDAIHAwIBAwUCAgQBAgQKCQECAgECBAUGAQIBCAUBBQoDBQkFA?=
+ =?us-ascii?q?gQBAQIBAwcEAwsGAgUCAQIDBQMDAgEKBQIDAQIBAQMEAwQEAQECAwICAQYCA?=
+ =?us-ascii?q?gEBAwMEAwECBAICAgcCAwIBBAIBAgMBAQECAgICAgIDAwkCCAcFAQIEAQIBB?=
+ =?us-ascii?q?AMCAgECBwECAgEIAwMFBQEDBw8DBQMBAwMCBQ8DAQYFAQIBAgICAgQCCQIEB?=
+ =?us-ascii?q?QIFAwIEAgMDAgIIAwIDAQIBBwQDBAEEAgQDBAsEAwQCAwICBQICAgICBQICA?=
+ =?us-ascii?q?wECAgICAgIFAgMCAQUBAgIBAgICBAECAgcEAgMBAwQOBAMCAgcBAgIBBgIHA?=
+ =?us-ascii?q?wECAQQDAQEEAgQBAgUCBAEDAQIGAgMBAwoCAgMCAQECAwMDBQMDAggEBQIDB?=
+ =?us-ascii?q?QIEAQECBAMEAgILAQYCBwICAwICBAQEAQECAQQFAgMBAgMDCQICAwIEAgIKA?=
+ =?us-ascii?q?QEBAQICAQUFAgQHBgICBQICAgMBAgICAQMCAgEBAgIFBAkSAQECAwMDBAYFA?=
+ =?us-ascii?q?wIDBQIBEAMCAQYCAQECAgMDAgYCAQIIAgQBBAUCAQIBAQICBAEDBgICAQEBA?=
+ =?us-ascii?q?gECAgMDAgECAgIEAwMBAgECAgIDAgICAwICARACBgYBAgICAgICAgICAQUBA?=
+ =?us-ascii?q?gECAwECBwIEAwIBAgIFAgICAwEBBgIECwEDAgICAgEGAQMBAQIFAQICAgMBA?=
+ =?us-ascii?q?QMDBAMDCwMCDAgBBQEDASEDAgIIAgcCAQYDAgEPAwICAwICAQQKAgMFAgQCA?=
+ =?us-ascii?q?QQJBwIEAQIJAwIGAgcFGAECAgcEDAoBAQICBQYCBAEBAQEDAQIBAQIDBAIDA?=
+ =?us-ascii?q?gQFAQUCAQIFAgICAgEBAgUCDAECAQMEAgQCBwMCAgIDAQQCAQIBAwMCAwEBA?=
+ =?us-ascii?q?QMGBgIDBAQCAwMGAgICAwIBAgIDAgQOAgEFAgIGAwIEAQ0GBQQFBAUCCAECA?=
+ =?us-ascii?q?QEHAgQCBwkOAgECBAEFAgIDAgIBBQIBAgIEAwECAgICBQgFAwQBBAMGDwMBA?=
+ =?us-ascii?q?QQDAgECAQQDAgMJAwIEBAMBAgMBBAYGAQkDAgIGAwICAQENAwQCAgECAQIBA?=
+ =?us-ascii?q?gMEBAQCAgIBAgIBAwICAgMEAgIBAQMDAwICAgMCBAIDAwsGCgEHAgICAwIBB?=
+ =?us-ascii?q?QsCAgIDAgEBAwYEBQIEAgIGAQIEAgICAgICAgMBAQMLBAIBAgMCAgYDBwIBA?=
+ =?us-ascii?q?gECAQkFAgEJAwECAQIBBAEDBgQBAgIECQIEBwUEBgQCAgICCAICAg4DAwIBA?=
+ =?us-ascii?q?QQDAgQDAgICCwIBAgcCBQEBAwUHAgIBAgIBBAMBBgUEAQICAwIBAQMDEwMDA?=
+ =?us-ascii?q?wEEAgIXnCuCVIFzAQEBkUc4gl2LK4ITnj0hAQkBBgIIUoFPeQ4HKIFJgmmcC?=
+ =?us-ascii?q?DKfVYkxhyyPY6IvhS0QIxKBLDqBXDMaI4EBbYFJTgECAQEBDQIBAQEDAQIBA?=
+ =?us-ascii?q?gkBAQKOHYNyimY8MTsCBgEKAQEDCYo5AQE?=
+IronPort-PHdr: A9a23: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
+IronPort-Data: A9a23:MhPIt6sl2T8x8IVqvmIfTSRxw+fnVOpZMUV32f8akzHdYApBsoF/q
+ tZmKWjSMvaPMWv9ctp1b9+w8R4OuJPVnNFmSFZq+yowHigQ9ZOVVN+UB3mrAy7DdceroGCLT
+ ik9hnssCOhuExcwcz/0auCJQUFUjP3OHvymYAL9EngZqTVMEU/Nsjo+3b9k6mJUqYLhWVnU4
+ Yus+5S31GKNglaYDEpEu8pvlzsz7JweiBtA1rDpTakW1LN2vyB94KM3fcldHVOhKmVnNrTSq
+ 9L48V2M1jixEyHBqz+Suu2TnkUiGtY+NOUS45Zcc/HKbhNq/0Te3o5gaqJEAav+Zvrgc91Zk
+ b1wWZKMpQgBN6rHqsEZfBhkLyxDMPVroJH9PUf8mJnGp6HGWyOEL/RGCUg3OcgV+L8yET8U+
+ boXLzcCah3FjOWzqF65YrNl3pxxdZW2ZNFD6i88n2uBX6R4G5yrr6bivbe02B8rj9xfFPPFZ
+ swWaSF1Z0mYPENnNVIeCZZ4l+Ct7pX6W2EE+QLN+/prvAA/yiRz/OnkYeXkUOW6ROhpshefg
+ G398FbAV0Ry2Nu3jGPtHmiXrubUnSDmXYtIPLa57fVtxlaUwwQ7ARsKX1Khu/iRgU+lUNUZI
+ EsRkgIjs68z6GSgT8L2WFuzp3vslhMDUNpdDus1wAqM0aHTpQ2eAwAsTCZcbsEpqcUeTj0x3
+ VjPlNTsbRR1q6CZSGiQ+p+frCi5Pm4eKmpqTSwNVgot6Nj4q4Z1hRXKJuuPC4awh9zxXDzym
+ nWa8nIywboUisEP2uOw+lWvby+QSobhRwk+1CDTcWOZ0g5EadaIP6KS9WeYxKMVRGqGdWVtR
+ VBd8yRq18hXVcvlvHXVHo0lRej1j8tpxRWG3DaD6bF9rGX8k5NiFKgMiAxDyLBBa5xZIWC1P
+ RaI4Wu8JvZ7ZROXUEO+WKroY+wCwq3pFNCjXffRBueiqLAsKWdrJQliOhyd2X7Dik8pnf1tM
+ JuXa5z8X20TFbVuySG3QegdyqUgm3hhm0vcQJn6y1Ks1r/HPCyZTrIMMV2vaOEl7fPc8F+Fr
+ YoHb8bamQ9CVODeYzXM9dFBIF0PK089D8+kpsFScNmFPQc7SnoqDOXcwO96doE8x/ZVm+7E8
+ 2uTQEhdzFaj13TLJR/QOiJ4Ya/+VJNkrHQ0PTc2NgvwhCYLboOm7aNZfJwyJOF1+OtmxP9yb
+ v8EZ8TQWqQVGmqbo2wQNMCvopZjeRKngRO1ExCkODVvLYR9QwHp+8P/elS9+SQLCB2xv5Rsr
+ rCl0DTdXsNfFQlvCcDhaMWvwUm0in4Tlb8gREDPONRSJBzh/YU2eSz8ivg7f5MFJRnZnGfI0
+ g+XBVIVp7CIs9Fv/J/GgqeLq4rvGOx7RxIIE27e5LewFC/b4mvzntMaAbjQJWjQBDHu5aGvR
+ eRJ1PWgYvcJq1BH7thnGLFxwKNiutbi++1AwgJ/ECmZZlinEOk8cHyP3M0Ku68Ug68H4wfwV
+ UWI9d1Xf76OPZq9QlIWIQMkaMWF1O0VymaOt6VreB2i6X8l5qeDXGVTIwKI1H5XIoxzPd532
+ uwmosMXt1GyhxdC3gxqVcyIG7lg70DsUpnLcrkfCY7vzwcpkxRSP8bQTCDx556LZpNHNUxCz
+ vp4Qkbdr+w0+6YAWyJb+bvxMS51ipEHuRQMx1gHT7hMssSQnec5hXW97hxuJjloIt57Py6f9
+ 4Sl24CZ5UlDwtuwuPV+Yg==
+IronPort-HdrOrdr: A9a23:u8Khpa5MEZbUjcRGyAPXwPfXdLJyesId70hD6qm+c20tTiX4rb
+ HXoB1/73XJYVkqKRQdcLy7Scu9qDbnhP1ICOoqXItKPjOW3FdARbsKheDfKn/bexEWndQtsp
+ uIHZIObuEYzmIXsS852mSF+hobr+VvOZrHudvj
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-AV: E=Sophos;i="5.95,163,1661817600"; 
+   d="scan'208,217";a="449806847"
+X-IronPort-Outbreak-Status: No, level 0, Unknown - Unknown
+Received: from mail-ej1-x62d.google.com ([IPv6:2a00:1450:4864:20::62d])
+  by alln-inbound-k.cisco.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384; 06 Oct 2022 05:12:55 +0000
+Received: by mail-ej1-x62d.google.com with SMTP id a2so1983644ejx.10;
+        Wed, 05 Oct 2022 22:12:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date;
+        bh=1t0mwiRneidWnSZL6RRV5WPJz1hnQhBT93ugidq1jmg=;
+        b=Bzggg9nVUH8Y4+eLWnxB116AsIz1QR9CsIPMX3XZ7nahpZ9JRCwsOVBj5aC2WoYa7w
+         qZYzUNcyNq8ESbZoa1xvYSOXTDVzMJn3EJQDAr8jQe1HgKo2jX98x5LKqpAzpysD3+lN
+         yDhqECb9TyUmm+8TVtK1p2YpQaDvikmmJojzPFCBX1LLtonykDXFhAvNvpqekf7JWGoC
+         xLaD2G4fllTHVXC61cly1yj5arJyAUNlnIn9gb1IjKs8DAzN/0qOfMkeZ2GtWfR8Midp
+         SGXOPyN3ERGqu4+FIsczExApUriZRFtqR7PTEA+aRr4hGfyLc/O2zKWO08Gru0Qt1OdT
+         POlg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-message-state:from:to:cc:subject:date;
+        bh=1t0mwiRneidWnSZL6RRV5WPJz1hnQhBT93ugidq1jmg=;
+        b=w65VQUNcheVU1ZqbcpCNyk8pMDhg9Uk6giLVePpsGsBGPnYiu3lJOeAcRcHdfwaanG
+         lx5RWcvhpiR22UvhhilXNQfXsh0gHJ9zXFCVpnied3so86fkQ06fR0sFC8a+FJ3nhB/5
+         X+eBnZa+mqxKR2kFQmdmeVEfa5bwP7QJpDmTy5WNEl0J2PNpT0hhO1W9KAxm0RxBCaD0
+         ErTkr2dWOhrYCsUHTdx+WW43gd6rhxY+qKvNjDWU6jHv1gBKFfEozMmKyErOH12YCPrc
+         nNWkslMFvyQ24c2e0JA4JIhz0uM27nKCJv9tLzyAglz15tcIx8TNwk2920JsbaNs8s4l
+         mZ2g==
+X-Gm-Message-State: ACrzQf053GCZHJcezfW5hg4Nn77x8w9NjaneokuH+Vo18IB1+CcoKISR
+	V7gyKzEJyl4JriO5JRo9pOVRLbEgYL6vzvE/N9iRZ0N6i3A=
+X-Google-Smtp-Source: AMsMyM6WpSOd7BplGLdRLIYcl+l/FTOk1ZZOHZhoYU/PcCQhbMGTkd9yYzW+hTb9t0OhZcYrNrhxyB9s2ZRiMErvjbc=
+X-Received: by 2002:a17:907:7287:b0:783:5e47:33a0 with SMTP id
+ dt7-20020a170907728700b007835e4733a0mr2457042ejc.449.1665033173461; Wed, 05
+ Oct 2022 22:12:53 -0700 (PDT)
+References: <SJ0PR11MB51364785FA2155B7AC7C57529A5D9@SJ0PR11MB5136.namprd11.prod.outlook.com>
+In-Reply-To: <SJ0PR11MB51364785FA2155B7AC7C57529A5D9@SJ0PR11MB5136.namprd11.prod.outlook.com>
+From: Satyam Singh <satyamsinghsrc5076@gmail.com>
+Date: Thu, 6 Oct 2022 10:42:41 +0530
+Message-ID: <CAAjHR3rHz8PFvYrx9u3UzAAd+ibOvrWSF=R7hBsO-1XfhR2ptQ@mail.gmail.com>
+Subject: Re: Cisco Hackathon 2022 - Part of Cisco team/Idea
+To: "Ashish Kumar (ashkuma2)" <ashkuma2@cisco.com>
+Cc: "Antonio Barrios (antbarri)" <antbarri@cisco.com>,
+        "Eric Voit (evoit)" <evoit@cisco.com>,
+        "Eric Cheung (ewcheung)" <ewcheung@cisco.com>,
+        "Jithendra Punugubati (jpunugub)" <jpunugub@cisco.com>,
+        "Krishna Sudireddi (rsudired)" <rsudired@cisco.com>,
+        "Kasi Nalamalapu (kasi)" <kasi@cisco.com>
+Content-Type: multipart/alternative; boundary="000000000000d7ef3905ea56bee6"
+X-Outbound-SMTP-Client: 173.37.147.241, alln-inbound-k.cisco.com
+X-Outbound-Node: alln-core-10.cisco.com
+Return-Path: satyamsinghsrc5076@gmail.com
+X-OrganizationHeadersPreserved: xbe-rcd-004.cisco.com
+X-MS-Exchange-Organization-ExpirationStartTime: 06 Oct 2022 05:13:10.8515
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 048d37f8-176a-453b-27a4-08daa7597682
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-CrossPremisesHeadersPromoted:
+ DM6NAM10FT043.eop-nam10.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ DM6NAM10FT043.eop-nam10.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DM6NAM10FT043:EE_|DM4PR11MB6382:EE_
+X-MS-Exchange-Organization-AuthSource: xbe-rcd-001.cisco.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-OriginatorOrg: mail.cisco.com
+X-MS-Office365-Filtering-Correlation-Id: 048d37f8-176a-453b-27a4-08daa7597682
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:173.37.135.122;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail.cisco.com;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230022)(4636009)(84050400002)(451199015)(156005)(1096003)(356005)(81166007)(73392003)(336012)(86362001)(4326008)(55446002)(66899015)(8936002)(33964004)(53546011)(82202003)(6666004)(26005)(76482006)(8676002)(6916009)(5660300002)(42186006)(54906003)(82310400005)(57042007);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Oct 2022 05:13:10.8203
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 048d37f8-176a-453b-27a4-08daa7597682
+X-MS-Exchange-CrossTenant-Id: 5ae1af62-9505-4097-a69a-c1553ef7840e
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=5ae1af62-9505-4097-a69a-c1553ef7840e;Ip=[173.37.135.122];Helo=[mail.cisco.com]
+X-MS-Exchange-CrossTenant-AuthSource: xbe-rcd-001.cisco.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM4PR11MB6382
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.3661832
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.5676.032
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:1;jmr:0;auth:0;dest:C;OFR:CustomRules;ENG:(910001)(944506478)(944626604)(920097)(930097);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?dHVUaVlqRFRwUU5oYlVZanBodW5QU2kyU1BvVjdJVWw5RHdoSTZuR0cyT2Iy?=
+ =?utf-8?B?enNveWlrRWhwbzIxelVGcGdtSUFiRDc3WHlkL3lKWWpCaEt5SVNJay9DaXRo?=
+ =?utf-8?B?Nk9WZnNwbVNyVi9xVjY2NGxKaFIwUXV6Z1lZTUZVQ3p1TERQWU1aMnlhR1l2?=
+ =?utf-8?B?dU93cGlmYnEyNDdkcUdyZVJYT09yeTlwMUlWS1dSQ3NGSnI3YmRQZDd4TndY?=
+ =?utf-8?B?Z2hvYldxUG9GTWpuVExJdnNhd1Y5ajhXSXhnc0RBdEJUdXgyVWpudndWKzdk?=
+ =?utf-8?B?T0lYZnlycE5iNDJXRDNDYTlyeFQrMzdQZ3FYRy9UV0FRaXBvU3JsZThBaGty?=
+ =?utf-8?B?Q0ZKeVpobVlQOENOUmVjZHN3MUpYMkNRUEJaenNzRmdQNzFRYWxZcTl5bWlx?=
+ =?utf-8?B?MFZJWDVDcDZQdERCTlFrYU9qYzA5ZlM5TlN4ZWd6RkI5Qk13QkF1QXZSRWZr?=
+ =?utf-8?B?OEFuVlY1Zmd5VDFtbGdLcFlWUXZ1ZDh5YlorSEZPNnNMakJ5dUFEMHlaaEpv?=
+ =?utf-8?B?VldHSlJTc2RYeGsxeHA0YWRsUjNoeFhnNEhaMVNWVnhJM0ZwRmVINnFuaGts?=
+ =?utf-8?B?ODN1S212L0VxOGNUMHhyRWo3NHh5SmxOSjBpWDdzZEh6K21QUFZ0UkVNeWx3?=
+ =?utf-8?B?M0dMb1J2emg3OTJ3ZmNsTlkramx1UVhjMzQySzcyeTEranRudUtoMjZOTCtU?=
+ =?utf-8?B?Z0lSbllBOTJpR01sZnBiREloVVFMTDQxZGd0UDJrbisrKzU4b2NtOGUvYUV0?=
+ =?utf-8?B?QitKVkdhRlJpOStXOFZjbW83QlFva2k3TTZVZ0FJalBENG5hbTc3cEpGUmVC?=
+ =?utf-8?B?Nmc5NHh3MkJ5di9RazZ1ZEczSmVJNm9MMlJ2QmhpbHp0RDlrNkdNK3NFOXVK?=
+ =?utf-8?B?L0ZBL1U1QTIrd1dTNXNmam1seGJ2b0krN1VWNlUrYlRKL1JicmRLYXUvSTJV?=
+ =?utf-8?B?eWs4aC9CQml1OFd6NS9KYW9rT0hhUDF0ZWhVdTYwMHpaODk4ck1CYS9TbDM4?=
+ =?utf-8?B?Z3dpd3NyNHc5bFdqc25Cdk9pMVE4bmFSNGt5cXREV1M5cC9WeFF2K1lWNHgy?=
+ =?utf-8?B?Z1g4bStVQzBKeGwvc0pGTDQyY0pxeFIzcmE0MjlsM3BhQkJpTkg0Z2NTZE5X?=
+ =?utf-8?B?UE0wTndBYVZKUTJ2cnNnSlJ0Z2M5cyt3bTEwZ0RCTG1QdXNSUWFQRDZlaHg0?=
+ =?utf-8?B?V2F1WTh6WG95QW9hK1ZnaVZUbmNldzl5K1hXN05UYnU5TDNoUVdSUGdJVFd2?=
+ =?utf-8?B?ZlNVckxHSEk2bUo1QXM5SHAzM1k4UTdyQ2QwcDRWYmY3YTFrVXYvMyswOEtx?=
+ =?utf-8?B?NS9pUmlXRWlJMTErTkZTaEVnZTd4dGVWTlVRRDZwWlhoZUd0dHQ3ZTkrZFRZ?=
+ =?utf-8?B?ZzBveWptb25jWlppejF6aXI1VHhwNGZrTzM2MDBXbmRFbDUzcWJUc3ZpWC9Z?=
+ =?utf-8?B?U3c5ME80b295T1hmbjkrNitxb2dBTUx1MXdBYXFEZmZZM2Y1NHplUU5FQ2Z4?=
+ =?utf-8?B?QmlQMThxdlFOZFc5eVo5S2ZNVjJDelluQlVsOEUwSlBtcmhzcUxDSXBzMVpM?=
+ =?utf-8?B?bVJidy90bTB2WEdDQUtkTWwvaExRaTVnTmpKU29ab1E0bERjTWhWcExqYi85?=
+ =?utf-8?B?MHlhNElBV0JjSVM4OTFkMTlTVWRRTzhkcWppNmYrWk5idW1HN2R0Z0drbnFq?=
+ =?utf-8?B?OVRnYmM5TEVocDh4SkxCSWV0ekl2MlVuNVBobDNqd0xPOUlacmh0V0REN0ll?=
+ =?utf-8?B?UWx2OFpWNG1WVWlVckdwTTkrdlFyL0tjQ1VscTVYb1BJN00yK2oxUmwzaTE1?=
+ =?utf-8?B?ci9CQkxGRzhRZ3VHckVkUVFOSmRHS0daQXJFTUUxanFuNVYxMlREVm9aWkRn?=
+ =?utf-8?B?ZTgrNGRLWFJ4RFRONFN6ZmF1OFpqWHRTdmNQMkUvdi8xTGZGNHE3cGRyQ0FY?=
+ =?utf-8?B?Q0dIYVVNK2JJSUpOWGxDK04ycGVFd0RXSDR5RzdBbUpRWWtoa1NrLzFPZWVP?=
+ =?utf-8?B?L0NGZjZzRjJ4bjMzZU9oV0ZEVU5RZEp2L3VKcGVOMnRlbnBuaS9DbnZ3QzFL?=
+ =?utf-8?B?WVlIM3RMbUl5Y2krUitFVHNnRktMZUpQTDRxOC8rM29wK1FtSkVTWUJSamJk?=
+ =?utf-8?B?cnJNV3VJR3k0cE5BaCtFRU5yS3ROeFpNNEFzTmp4eXppTUh5RHliRHZwcHox?=
+ =?utf-8?B?YUtNYkYwVVk2cEdHeEtmbFBCL0cvUUg1R2h2aVBsVUlKR2xOVHcvaXdxQVR6?=
+ =?utf-8?Q?SXApPX34jAj4fBehYhr12IJyeL3SxrWeumQz/Q1GT4=3D?=
+MIME-Version: 1.0
+
+--000000000000d7ef3905ea56bee6
+Content-Type: text/plain; charset="UTF-8"
+
+Awesome, thank you !
+
+On Wed, Oct 5, 2022 at 11:10 AM Ashish Kumar (ashkuma2) <ashkuma2@cisco.com>
+wrote:
+
+> Hello* Satyam*,
+>
+> Welcome to Cisco Hackathon 2022! The ultimate chance to learn and make
+> connections!
+>
+>
+>
+> We have added you to the following project, which is based in North
+> America!
+>
+> Your team members are CCed, who can provide more information on the same!
+>
+>
+>
+> *Project/Team name:* Energy Savings for Customers
+>
+> *Description:* 802.3az in Copper Ethernet Aggregation
+>
+>
+>
+> - Ashish
+>
+>
+>
+
+--000000000000d7ef3905ea56bee6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">Awesome, thank you !<br></div><br><div class=3D"gmail_quote"=
+><div dir=3D"ltr" class=3D"gmail_attr">On Wed, Oct 5, 2022 at 11:10 AM Ashi=
+sh Kumar (ashkuma2) &lt;<a href=3D"mailto:ashkuma2@cisco.com">ashkuma2@cisc=
+o.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:=
+1ex"><div class=3D"msg5167578112336611097">
+
+
+
+
+
+<div lang=3D"EN-US" style=3D"overflow-wrap: break-word;">
+<div class=3D"m_5167578112336611097WordSection1">
+<p class=3D"MsoNormal">Hello<b><span style=3D"color:rgb(0,112,192)"> Satyam=
+</span></b>,</p>
+<p class=3D"MsoNormal">Welcome to Cisco Hackathon 2022! The ultimate chance=
+ to learn and make connections!</p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal">We have added you to the following project, which is=
+ based in North America!</p>
+<p class=3D"MsoNormal">Your team members are CCed, who can provide more inf=
+ormation on the same!</p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal"><b>Project/Team name:</b> <span style=3D"color:rgb(0=
+,112,192)">Energy Savings for Customers</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><b>Description:</b> <span style=3D"color:rgb(0,112,1=
+92)">802.3az in Copper Ethernet Aggregation</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<div>
+<div>
+<p class=3D"MsoNormal">- Ashish<u></u><u></u></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</div>
+</div>
+
+</div></blockquote></div>
+
+--000000000000d7ef3905ea56bee6--
