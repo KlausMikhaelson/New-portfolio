@@ -1,6 +1,5 @@
 body {
     height: 100vh;
-    margin: 0;
     padding: 0;
     background-color: #020e26;
 }
@@ -12,10 +11,12 @@ body {
     justify-content: center;
     perspective: 90rem;
     perspective-origin: 30% 60%;
+    margin-top: 18%;
 }
 
 .div-transform {
-    display: flex;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
     transform: rotateX(10deg) rotateY(15deg) rotateZ(-9deg) scale3d(1,1, -0.9) scale(1.1) translateX(50px);
 }
 
@@ -25,6 +26,7 @@ body {
     border-radius: 8px;
     padding: 0px 18px;
     width: 300px;
+    margin: 30px;
     transition: 0.5s ease;
     overflow: hidden;
     transform: translate(0);
@@ -92,4 +94,75 @@ body {
 
 .card-3::before {
     background: linear-gradient(90deg, #ff9500 0%, #d5cb0f 100%);
+}
+
+.card-4 {
+    background-size: cover;
+    margin-bottom: 100%;
+}
+
+.card-4:hover {
+    transform: scale(1.08);
+    box-shadow: -7px 4px 28px -3px #3B5998;
+}
+
+.card-4::before {
+    background: linear-gradient(90deg, #3B5998 0%, #d5cb0f 100%);
+}
+
+@media (max-width: 1295px) and (min-width: 1029px) {
+    .div-transform {
+        display: grid;
+        grid-template-columns: 35% 35%;
+    }   
+    .card {
+        margin-right: 150px;
+    }
+    .container {
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 1029px) and (min-width: 818px) {
+    .div-transform {
+        display: grid;
+        grid-template-columns: 50%;
+        margin-top: 100%;
+    }   
+    .card {
+        /* margin-right: 150px; */
+    }
+    
+}
+
+@media (max-width: 817px) and (min-width: 649px) {
+    .div-transform {
+        display: grid;
+        grid-template-columns: 50%;
+        margin-top: 10%;
+    }   
+    .card {
+        /* margin-right: 150px; */
+    }
+    .container {
+        margin-top: 100%;
+    }
+}
+
+@media (max-width: 648px) and (min-width: 514px) {
+    .div-transform {
+        display: grid;
+        grid-template-columns: 50%;
+        margin-top: 170%;
+    transform: rotateX(10deg) rotateY(15deg) rotateZ(0deg) scale3d(1,1, -0.9) scale(1.1) translateX(50px);
+    }   
+}
+
+@media (max-width: 514px)  {
+    .div-transform {
+        display: grid;
+        grid-template-columns: 50%;
+        margin-top: 250%;
+    transform: rotateX(10deg) rotateY(15deg) rotateZ(0deg) scale3d(1,1, -0.9) scale(1.1) translateX(50px);
+    }   
 }
