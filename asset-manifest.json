@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/New-portfolio/static/css/main.62da3c50.css",
-    "main.js": "/New-portfolio/static/js/main.ba4a6e46.js",
+    "main.css": "/New-portfolio/static/css/main.f69f0084.css",
+    "main.js": "/New-portfolio/static/js/main.85ded695.js",
     "static/js/787.c4e7f8f9.chunk.js": "/New-portfolio/static/js/787.c4e7f8f9.chunk.js",
     "static/media/hand.gif": "/New-portfolio/static/media/hand.7851815b641795886dab.gif",
     "static/media/hero.png": "/New-portfolio/static/media/hero.71f2d930b936269b3324.png",
@@ -9,16 +9,17 @@
     "static/media/mongo.png": "/New-portfolio/static/media/mongo.3a364684503a40b5fbb2.png",
     "static/media/tensorflow.png": "/New-portfolio/static/media/tensorflow.340075d9bbba9c02c564.png",
     "static/media/nodejs.png": "/New-portfolio/static/media/nodejs.552a66ad0fbe2937e1ff.png",
+    "static/media/bgcard.jpg": "/New-portfolio/static/media/bgcard.31404c2b0c9b797f8928.jpg",
     "static/media/js.png": "/New-portfolio/static/media/js.7f8751632b42a9932c15.png",
     "static/media/react.png": "/New-portfolio/static/media/react.fd373eec9017cf21b26d.png",
     "static/media/java.png": "/New-portfolio/static/media/java.d64cf78809d814a80912.png",
     "index.html": "/New-portfolio/index.html",
-    "main.62da3c50.css.map": "/New-portfolio/static/css/main.62da3c50.css.map",
-    "main.ba4a6e46.js.map": "/New-portfolio/static/js/main.ba4a6e46.js.map",
+    "main.f69f0084.css.map": "/New-portfolio/static/css/main.f69f0084.css.map",
+    "main.85ded695.js.map": "/New-portfolio/static/js/main.85ded695.js.map",
     "787.c4e7f8f9.chunk.js.map": "/New-portfolio/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.62da3c50.css",
-    "static/js/main.ba4a6e46.js"
+    "static/css/main.f69f0084.css",
+    "static/js/main.85ded695.js"
   ]
 }
