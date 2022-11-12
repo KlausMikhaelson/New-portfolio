@@ -1,49 +1,31 @@
-.project-header {
-    color: white;
-    font-size: 2.5rem;
-    margin: 50px;
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #020e26;
 }
 
-.project-list {
-    margin-top: 100px;
-    color: white;
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-}
-
-.vsroom {
-    text-align: center;
-    width: 269px;
-}
-
-.project-img img {
-    border-radius: 50%;
-    padding: 30px;
-    border: 3px solid #00acee;
-    box-shadow:-1px -2px 8px 5px grey;
-    margin: 20px;
-
-}
-
-.project-img {
+.container {
     display: flex;
+    height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    perspective: 90rem;
+    perspective-origin: 30% 60%;
 }
 
-.vsroom h1 {
-    color: black;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px 10px 0px 0px;
+.div-transform {
+    display: flex;
+    transform: rotateX(10deg) rotateY(15deg) rotateZ(-9deg) scale3d(1,1, -0.9) scale(1.1) translateX(50px);
 }
 
-.vsroom p {
-    background-color:white;
-    color: black;
-    border-radius: 0px 0px 10px 10px;
+.card {
+    background: url('../Assets/bgcard.jpg');
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 0px 18px;
+    width: 244px;
+    transition: 0.5s ease;
+    overflow: hidden;
+    transform: translate(0);
 }

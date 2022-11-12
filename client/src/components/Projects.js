@@ -5,42 +5,36 @@ import VSimg from "../Assets/vsroom.png"
 const Projects = () => {
   return (
     <>
-    <div>
-        <h1 className='project-header'>
-            Projects !
-        </h1>
-        <div className='project-list'>
-          <span className='vsroom'>
-            <h1>Virtual Study Room</h1>
-            <span className='project-img'>
-            <img src={VSimg} alt="Virtual Study Room" />
-            </span>
-            <p>Virtual Study Room helps users <br></br>
-            to study collaboratively with <br></br> 
-            their friends while
-            </p>
-          </span>
-          {/* <span className='vsroom'>
-            <h1>Virtual Study Room</h1>
-            <span className='project-img'>
-            <img src={VSimg} alt="Virtual Study Room" />
-            </span>
-            <p>Virtual Study Room helps users <br></br>
-            to study collaboratively with <br></br> 
-            their friends while
-            </p>
-          </span>
-          <span className='vsroom'>
-            <h1>Virtual Study Room</h1>
-            <span className='project-img'>
-            <img src={VSimg} alt="Virtual Study Room" />
-            </span>
-            <p>Virtual Study Room helps users <br></br>
-            to study collaboratively with <br></br> 
-            their friends while
-            </p>
-          </span> */}
+    <div className='container'>
+      <div className='div-transform'>
+        <div className='card card-1'>
+          <h1>dfks sdfksdf sdfjjh dfj</h1>
+          <p>
+            Ka fskjf sfjk fqenng fgb gcnvbdkjbv vnd 
+            vdfkhsg sgkjsdg sdgmdsbgkjsdg dsngsdglsfdk
+            sdfjwehfjkbmv mvjsdlnsdfsdkfbks fsdkfbads fskjf
+          </p>
+          <h4>Element</h4>
         </div>
+        <div className='card card-2'>
+        <h1>dfks sdfksdf sdfjjh dfj</h1>
+          <p>
+            Ka fskjf sfjk fqenng fgb gcnvbdkjbv vnd 
+            vdfkhsg sgkjsdg sdgmdsbgkjsdg dsngsdglsfdk
+            sdfjwehfjkbmv mvjsdlnsdfsdkfbks fsdkfbads fskjf
+          </p>
+          <h4>Element</h4>
+        </div>
+        <div className='card card-3'>
+        <h1>dfks sdfksdf sdfjjh dfj</h1>
+          <p>
+            Ka fskjf sfjk fqenng fgb gcnvbdkjbv vnd 
+            vdfkhsg sgkjsdg sdgmdsbgkjsdg dsngsdglsfdk
+            sdfjwehfjkbmv mvjsdlnsdfsdkfbks fsdkfbads fskjf
+          </p>
+          <h4>Element</h4>
+        </div>
+      </div>
     </div>
     </>
   )
